@@ -1,6 +1,7 @@
 import 'package:bmi_calculator/theme.dart';
 import 'package:bmi_calculator/utils/enums.dart';
 import 'package:bmi_calculator/widgets/GenderButtons.dart';
+import 'package:bmi_calculator/widgets/HeightSlider.dart';
 import 'package:bmi_calculator/widgets/ReusableCard.dart';
 import 'package:flutter/material.dart';
 
@@ -25,33 +26,31 @@ class _InputPageState extends State<InputPage> {
           title: Text('BMI CALCULATOR'),
         ),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             GenderButtons(
               genderHandler: _genderHandler,
               active: activeGender,
             ),
-            Expanded(
-                child: ReusableCard(
-              color: secondaryColor,
-            )),
+            HeightSlider(),
             Expanded(
                 child: Row(
               children: [
                 Expanded(
                     child: ReusableCard(
-                  color: secondaryColor,
+                  color: kSecondaryColor,
                 )),
                 Expanded(
                     child: ReusableCard(
-                  color: secondaryColor,
+                  color: kSecondaryColor,
                 )),
               ],
             )),
             Container(
-              color: buttonsColor,
+              color: kButtonsColor,
               margin: EdgeInsets.only(top: 10),
               width: double.infinity,
-              height: bottomContainerHeight,
+              height: kBottomContainerHeight,
             )
           ],
         ));

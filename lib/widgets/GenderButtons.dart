@@ -38,7 +38,7 @@ class _Button extends StatelessWidget {
               ),
               Text(
                 label,
-                style: TextStyle(fontSize: 18, color: gray100),
+                style: kCardTextStyle,
               )
             ],
           ),
@@ -64,7 +64,7 @@ class GenderButtons extends StatelessWidget {
             label: 'MALE',
             icon: FontAwesomeIcons.mars,
             backgroundColor:
-                active == male ? secondaryColor : inactiveCardColor,
+                active == male ? kSecondaryColor : kInactiveCardColor,
             onTap: () {
               genderHandler(male);
             },
@@ -73,7 +73,7 @@ class GenderButtons extends StatelessWidget {
             label: 'FEMALE',
             icon: FontAwesomeIcons.venus,
             backgroundColor:
-                active == female ? secondaryColor : inactiveCardColor,
+                active == female ? kSecondaryColor : kInactiveCardColor,
             onTap: () {
               genderHandler(female);
             },
